@@ -2,7 +2,7 @@ function theImitationGame(input) {
     let actions = {
         'Move': move,
         'Insert': insert,
-        'ChangeAll': changeAll
+        'ChangeAll': changeAll,
     };
     let message = input.shift();
     while (input[0] != 'Decode') {
