@@ -6,7 +6,6 @@ function plantDiscovery(input) {
         'Update': update,
         'Reset': reset
     };
-
     for (let i = 0; i < n; i++) {
         let [plantName, rarity] = input.shift().split('<->');
         rarity = Number(rarity)
@@ -15,7 +14,6 @@ function plantDiscovery(input) {
             rating: []
         }
     }
-
     while (input[0] != 'Exhibition') {
         let tokens = input.shift().split(': ');
         let command = tokens.shift();
@@ -23,7 +21,6 @@ function plantDiscovery(input) {
         let action = myCommands[command];
         action(...tokens);
     }
-
     let sorted = Object.entries(myPlants).sort(sortering);
     console.log('Plants for the exhibition:');
     for (let each of sorted) {
