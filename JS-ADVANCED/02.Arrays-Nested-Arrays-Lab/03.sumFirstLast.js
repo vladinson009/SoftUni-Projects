@@ -1,0 +1,4 @@
+function sumFirstLast() {
+
+}
+sumFirstLast();
