@@ -11,8 +11,11 @@ function ticTacToe(input) {
             dashboard[first][second] = playerMark;
             playerMark == 'X' ? playerMark = 'O' : playerMark = 'X';
         }
-        if (isFullBoard() || isWin()) {
+        if (isWin()) {
             break;
+        }
+        if (isFullBoard()) {
+            break
         }
     }
     for (let rows of dashboard) {
