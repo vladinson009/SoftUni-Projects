@@ -11,7 +11,7 @@ function ticTacToe(input) {
             dashboard[first][second] = playerMark;
             playerMark == 'X' ? playerMark = 'O' : playerMark = 'X';
         }
-        if (!isFreeSpaceOn() || isWin()) {
+        if (isFullBoard() || isWin()) {
             break;
         }
     }
@@ -28,17 +28,17 @@ function ticTacToe(input) {
         };
     }
 
-    function isFreeSpaceOn() {
+    function isFullBoard() {
         for (let i = 0; i < dashboard.length; i++) {
             for (let j = 0; j < dashboard[i].length; j++) {
                 if (dashboard[i][j] == false) {
-                    return true;
+                    return false;
                 }
             }
         }
         // no free spaces
         console.log('The game ended! Nobody wins :(');
-        return false;
+        return true;
     }
 
     function isWin() {
