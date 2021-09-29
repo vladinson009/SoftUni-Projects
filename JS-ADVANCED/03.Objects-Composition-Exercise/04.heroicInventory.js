@@ -4,7 +4,7 @@ function heroicInventory(input) {
   for (let each of input) {
     const tokens = each.split(" / ");
     const name = tokens[0];
-    const level = tokens[1];
+    const level = Number(tokens[1]);
     let items = [];
     if (tokens.length > 2) {
       items = tokens[2].split(", ");
