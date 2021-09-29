@@ -2,7 +2,7 @@ function factory(library, orders) {
     const result = [];
 
     for (let order of orders) {
-        const currentObj = Object.assign({}, order.template)
+        const currentObj = Object.assign({}, order.template);
         for (let func of order.parts) {
             currentObj[func] = library[func];
         }

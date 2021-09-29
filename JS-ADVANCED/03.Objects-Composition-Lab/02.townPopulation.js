@@ -9,7 +9,7 @@ function townPopulation(input) {
         if (!myObj.hasOwnProperty(town)) {
             myObj[town] = 0;
         }
-        myObj[town] += population
+        myObj[town] += population;
     }
     for (let key in myObj) {
         console.log(`${key} : ${myObj[key]}`);
