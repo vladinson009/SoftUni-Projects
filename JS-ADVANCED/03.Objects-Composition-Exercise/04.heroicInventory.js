@@ -2,13 +2,9 @@ function heroicInventory(input) {
   let myHeroes = [];
 
   for (let each of input) {
-    const tokens = each.split(" / ");
-    const name = tokens[0];
-    const level = Number(tokens[1]);
-    let items = [];
-    if (tokens.length > 2) {
-      items = tokens[2].split(", ");
-    }
+    let [name, level, items] = each.split(" / ");
+    level = Number(level);
+    items = items ? items.split(", ") : [];
     let currentHero = {
       name,
       level,
