@@ -1,13 +1,9 @@
 function editElement(el, match, replacer) {
 
-    const pattern = new RegExp(match);
+    const pattern = new RegExp(match, 'g');
     let text = el.textContent;
     // el.textContent = text.replaceAll(match, replacer);
+    text = text.replace(pattern, replacer)
 
-    let currentMatch = pattern.exec(text);
-    while (currentMatch != null) {
-        text = text.replace(match, replacer)
-        currentMatch = pattern.exec(text);
-    }
     el.textContent = text;
 }
