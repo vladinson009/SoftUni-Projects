@@ -1,25 +1,12 @@
-function solve(inputText, outputCase) {
-    // const inputText = document.getElementById('text').value;
-    // const outputCase = document.getElementById('naming-convention').value;
-    // const output = document.getElementById('result');
-    const text = inputText.split(' ');
-    let result = '';
-
-    if (outputCase == 'Camel Case') {
-        result += text[0].toLowerCase();
-        for (let i = 1; i < text.length; i++) {
-            result += text[i][0].toUpperCase() + text[i].slice(1).toLowerCase();
-        }
-
-    } else if (outputCase == 'Pascal Case') {
-        for (let i = 0; i < text.length; i++) {
-            result += text[i][0].toUpperCase() + text[i].slice(1).toLowerCase();
-        }
-    } else {
-        result = 'Error!'
-    }
-    //output.textContent = result;
-    console.log(result);
+let arr = JSON.parse(`["PizzaHut - Peter 500, George 300, Mark 800",
+    "TheLake - Bob 1300, Joe 780, Jane 660"
+]
+`)
+for (let each of arr) {
+    const [restaurant, team] = each.split(' - ');
+    const eachPerson = team.split(', ');
+    const [person, salary] = eachPerson.split(' ');
+    console.log(restaurant, person, salary);
 
 }
-solve('kakvo stava', 'Pascal Case')
+// console.log(arr);
