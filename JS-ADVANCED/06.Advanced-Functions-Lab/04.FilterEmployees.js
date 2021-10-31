@@ -1,14 +1,14 @@
 function solve(data, criteria) {
-    data = JSON.parse(data);
-    const [key, value] = criteria.split('-');
+  data = JSON.parse(data);
+  const [key, value] = criteria.split('-');
 
-    if (key != 'all') {
-        data = data.filter(el => el[key] == value)
-    }
-    for (let i = 0; i < data.length; i++) {
-        const employee = data[i];
-        console.log(`${i}. ${employee.first_name} ${employee.last_name} - ${employee.email}`);
-    }
+  if (key != 'all') {
+    data = data.filter(el => el[key] == value)
+  }
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
+    console.log(`${i}. ${employee.first_name} ${employee.last_name} - ${employee.email}`);
+  }
 }
 
 solve(`[{
@@ -36,5 +36,5 @@ solve(`[{
     "email": "ev2@hostgator.com",
     "gender": "Male"
   }]`,
-    'last_name-Johnson'
+  'last_name-Johnson'
 )

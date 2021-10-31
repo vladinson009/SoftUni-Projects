@@ -1,10 +1,11 @@
 function listProcessor(list) {
+    const collection = []
     const actions = {
         add,
         remove,
         print
     }
-    const collection = []
+
     for (let command of list) {
         const [action, text] = command.split(' ');
         const func = actions[action];
