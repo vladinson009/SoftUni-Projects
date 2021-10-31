@@ -1,5 +1,4 @@
 function sortArray(arr, string) {
-
     function sorting(a, b) {
         if (string == 'asc') {
             return a - b;
